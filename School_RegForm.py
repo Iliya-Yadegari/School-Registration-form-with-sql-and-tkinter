@@ -65,7 +65,7 @@ Radiobutton(frm_4,text = 'no',variable = m,value = 1).grid(row = 10, column = 3,
 entryYear_entry.grid(row = 6, column = 3, padx = 10, pady = 10)
 grade_entry.grid(row = 7, column = 3, padx = 10, pady = 10)
 semester_entry.grid(row = 8, column = 3, padx = 10, pady = 10)
-frm_4.grid(row = 6, column = 2, padx = 10, pady = 10)
+frm_4.grid(row = 1, column = 2, padx = 10, pady = 10)
 
 frm_5 = LabelFrame(window,text = 'Address')
 
@@ -82,12 +82,18 @@ homeNum_entry = Entry(frm_5)
 cellNum_lbl = Label(frm_5,text = 'Cell Phone Number ==>').grid(row = 5, column = 2, padx = 10, pady = 10)
 cellNum_entry = Entry(frm_5)
 
+postalNum_lbl = Label(frm_5,text = 'Enter your postal number ===>').grid(row = 5, column = 4, padx = 10, pady = 10)
+postalNum_entry = Entry(frm_5)
+
 streetAdd_entry.grid(row = 0, column = 3, padx = 10, pady = 10)
 streetAdd2_entry.grid(row = 1, column = 3, padx = 10, pady = 10)
 city_entry.grid(row = 2, column = 3, padx = 10, pady = 10)
 state_entry.grid(row = 3, column = 3, padx = 10, pady = 10)
 homeNum_entry.grid(row = 4, column = 3, padx = 10, pady = 10)
 cellNum_entry.grid(row = 5, column = 3, padx = 10, pady = 10)
+postalNum_entry.grid(row = 5, column = 5, padx = 10, pady = 10)
 frm_5.grid(row = 0, column = 2, padx = 10, pady = 10)
+
+submit_btn = Button(window,text = 'Submit',width = 20, height = 3).grid(row = 2, column = 2, padx = 10, pady = 10)
 
 window.mainloop()
