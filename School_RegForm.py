@@ -2,7 +2,9 @@ from tkinter import *
 import SchoolRegFormModule as srfm
 
 window = Tk()
+
 window.title('School reg form')
+window.iconbitmap('registration.ico')
 
 frm_1 = LabelFrame(window,text = 'Additional documents for registration')
 add_lbl = Label(frm_1,text = '• Original Certified Birth Certificate\n• Original Social Security Card\n• Current Immunization Form\n• Current Proofs of Residence (ex. power, water or gas bill)\n• Other').grid(row = 0, column = 0, padx = 10, pady = 10)
@@ -95,6 +97,5 @@ cellNum_entry.grid(row = 5, column = 3, padx = 10, pady = 10)
 postalNum_entry.grid(row = 5, column = 5, padx = 10, pady = 10)
 frm_5.grid(row = 0, column = 2, padx = 10, pady = 10)
 
-submit_btn = Button(window,text = 'Submit',width = 20, height = 3,command = scfm.).grid(row = 2, column = 2, padx = 10, pady = 10)
-
+submit_btn = Button(window,text = 'Submit',width = 20, height = 3,command = lambda: srfm.column_save(name_entry.get(),lastName_entry.get(),birthDate_entry.get(),r.get(),d.get(),email_entry.get(),entryYear_entry.get(),grade_entry.get(),semester_entry.get(),m.get(),streetAdd_entry.get(),streetAdd2_entry.get(),city_entry.get(),state_entry.get(),postalNum_entry.get(),homeNum_entry.get(),cellNum_entry.get())).grid(row = 2, column = 2, padx = 10, pady = 10)
 window.mainloop()
