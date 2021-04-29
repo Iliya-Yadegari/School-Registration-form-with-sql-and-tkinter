@@ -9,7 +9,7 @@ add_lbl = Label(frm_1,text = '• Original Certified Birth Certificate\n• Orig
 frm_1.grid(row = 0, column = 0, padx = 10, pady = 10)
 
 frm_2 = LabelFrame(window,text = 'Name')
-name_lbl = Label(window,text = 'Enter your first name ===>').grid(row = 1, column = 0, padx = 10, pady = 10)
+name_lbl = Label(frm_2,text = 'Enter your first name ===>').grid(row = 1, column = 0, padx = 10, pady = 10)
 name_entry = Entry(frm_2)
 lastName_lbl = Label(frm_2,text = 'Enter your last name ===>').grid(row = 2, column = 0, padx = 10, pady = 10)
 lastName_entry = Entry(frm_2)
@@ -18,8 +18,8 @@ name_entry.grid(row = 1, column = 1, padx = 10, pady = 10)
 lastName_entry.grid(row = 2, column = 1, padx = 10, pady = 10)
 frm_2.grid(row = 1, column = 0, padx = 10, pady = 10)
 
-birthDate_lbl = Label(window,text = 'Enter your birth date ===>').grid(row = 3, column = 0, padx = 10, pady = 10)
-birthDate_entry = Entry(window,text = 'Enter your birth date ===>')
+birthDate_lbl = Label(frm_2,text = 'Enter your birth date ===>').grid(row = 3, column = 0, padx = 10, pady = 10)
+birthDate_entry = Entry(frm_2)
 
 birthDate_entry.grid(row = 3, column = 1, padx = 10, pady = 10)
 
@@ -48,16 +48,46 @@ email_entry.grid(row = 6, column = 1, padx = 10, pady = 10)
 
 frm_4 = LabelFrame(window)
 
-entryYear_lbl = Label(frm_4,text = 'Enter your entry year ===>').grid(row = 7, column = 0, padx = 10, pady = 10)
+m = IntVar()
+
+entryYear_lbl = Label(frm_4,text = 'Enter your entry year ===>').grid(row = 6, column = 2, padx = 10, pady = 10)
 entryYear_entry = Entry(frm_4)
-grade_lbl = Label(frm_4,text = 'Enter your grade ===>').grid(row = 8, column = 0, padx = 10, pady = 10)
+grade_lbl = Label(frm_4,text = 'Enter your grade ===>').grid(row = 7, column = 2, padx = 10, pady = 10)
 grade_entry = Entry(frm_4)
-semester_lbl = Label(frm_4,text = 'Enter your semester ===>').grid(row = 9, column = 0, padx = 10, pady = 10)
+semester_lbl = Label(frm_4,text = 'Enter your semester ===>').grid(row = 8, column = 2, padx = 10, pady = 10)
 semester_entry = Entry(frm_4)
 
-frm_4.grid(row = 7, column = 0, padx = 10, pady = 10)
-entryYear_entry.grid(row = 7, column = 1, padx = 10, pady = 10)
-grade_entry.grid(row = 8, column = 1, padx = 10, pady = 10)
-semester_entry.grid(row = 9, column = 1, padx = 10, pady = 10)
+radioBut_lbl = Label(frm_4,text = 'Have you previously applied to or attended this school?').grid(row = 9, column = 0, padx = 10, pady = 10)
+
+Radiobutton(frm_4,text = 'Yes',variable = m,value = 1).grid(row = 10, column = 2, padx = 10, pady = 10)
+Radiobutton(frm_4,text = 'no',variable = m,value = 1).grid(row = 10, column = 3, padx = 10, pady = 10)
+
+entryYear_entry.grid(row = 6, column = 3, padx = 10, pady = 10)
+grade_entry.grid(row = 7, column = 3, padx = 10, pady = 10)
+semester_entry.grid(row = 8, column = 3, padx = 10, pady = 10)
+frm_4.grid(row = 6, column = 2, padx = 10, pady = 10)
+
+frm_5 = LabelFrame(window,text = 'Address')
+
+streetAdd_lbl = Label(frm_5,text = 'Street Address ===>').grid(row = 0, column = 2, padx = 10, pady = 10)
+streetAdd_entry = Entry(frm_5)
+streetAdd2_lbl = Label(frm_5,text = 'Street Address Line 2 ===>').grid(row = 1, column = 2, padx = 10, pady = 10)
+streetAdd2_entry = Entry(frm_5)
+city_lbl = Label(frm_5,text = 'City ===>').grid(row = 2, column = 2, padx = 10, pady = 10)
+city_entry = Entry(frm_5)
+state_lbl = Label(frm_5,text = 'State/Province ===>').grid(row = 3, column = 2, padx = 10, pady = 10)
+state_entry = Entry(frm_5)
+homeNum_lbl = Label(frm_5,text = 'Home Phone Number ===>').grid(row = 4, column = 2, padx = 10, pady = 10)
+homeNum_entry = Entry(frm_5)
+cellNum_lbl = Label(frm_5,text = 'Cell Phone Number ==>').grid(row = 5, column = 2, padx = 10, pady = 10)
+cellNum_entry = Entry(frm_5)
+
+streetAdd_entry.grid(row = 0, column = 3, padx = 10, pady = 10)
+streetAdd2_entry.grid(row = 1, column = 3, padx = 10, pady = 10)
+city_entry.grid(row = 2, column = 3, padx = 10, pady = 10)
+state_entry.grid(row = 3, column = 3, padx = 10, pady = 10)
+homeNum_entry.grid(row = 4, column = 3, padx = 10, pady = 10)
+cellNum_entry.grid(row = 5, column = 3, padx = 10, pady = 10)
+frm_5.grid(row = 0, column = 2, padx = 10, pady = 10)
 
 window.mainloop()
