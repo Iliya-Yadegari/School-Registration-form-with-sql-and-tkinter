@@ -1,4 +1,5 @@
 from tkinter import *
+import SchoolRegFormModule as srfm
 
 window = Tk()
 window.title('School reg form')
@@ -94,6 +95,6 @@ cellNum_entry.grid(row = 5, column = 3, padx = 10, pady = 10)
 postalNum_entry.grid(row = 5, column = 5, padx = 10, pady = 10)
 frm_5.grid(row = 0, column = 2, padx = 10, pady = 10)
 
-submit_btn = Button(window,text = 'Submit',width = 20, height = 3).grid(row = 2, column = 2, padx = 10, pady = 10)
+submit_btn = Button(window,text = 'Submit',width = 20, height = 3,command = scfm.).grid(row = 2, column = 2, padx = 10, pady = 10)
 
 window.mainloop()
