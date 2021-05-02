@@ -35,19 +35,19 @@ d = StringVar()
 ethnicityLst = ['African Amercian','Hispanic/Latino','Asian','Caucasian','Native American/Alaskan','Hawaiian/Pacific Islander','Middle Eastern','Prefer not to answer','Other']
 d.set(ethnicityLst[0])
 
-gender_lbl = Label(frm_3,text = 'Enter your gender ===>').grid(row = 4, column = 0, padx = 10, pady = 10)
+gender_lbl = Label(frm_3,text = 'Enter your gender ===>').grid(row = 4, column = 0)
 gender_drop = OptionMenu(frm_3,r,*gender_lst)
 
-ethnicity_lbl = Label(frm_3,text = 'Enter your ethnicity ===>').grid(row = 5, column = 0, padx = 10, pady = 10)
+ethnicity_lbl = Label(frm_3,text = 'Enter your ethnicity ===>').grid(row = 5, column = 0)
 ethnicity_drop = OptionMenu(frm_3,d,*ethnicityLst)
 
-email_lbl = Label(frm_3,text = 'Enter your email ===>').grid(row = 6, column = 0, padx = 10, pady = 10)
+email_lbl = Label(frm_3,text = 'Enter your email ===>').grid(row = 6, column = 0)
 email_entry = Entry(frm_3)
 
-frm_3.grid(row = 4, column = 0, padx = 10, pady = 10)
-gender_drop.grid(row = 4, column = 1, padx = 10, pady = 10)
-ethnicity_drop.grid(row = 5, column = 1, padx = 10, pady = 10)
-email_entry.grid(row = 6, column = 1, padx = 10, pady = 10)
+frm_3.grid(row = 4, column = 0)
+gender_drop.grid(row = 4, column = 1)
+ethnicity_drop.grid(row = 5, column = 1)
+email_entry.grid(row = 6, column = 1)
 
 frm_4 = LabelFrame(window)
 
@@ -63,7 +63,7 @@ semester_entry = Entry(frm_4)
 radioBut_lbl = Label(frm_4,text = 'Have you previously applied to or attended this school?').grid(row = 9, column = 0, padx = 10, pady = 10)
 
 Radiobutton(frm_4,text = 'Yes',variable = m,value = 1).grid(row = 10, column = 2, padx = 10, pady = 10)
-Radiobutton(frm_4,text = 'no',variable = m,value = 1).grid(row = 10, column = 3, padx = 10, pady = 10)
+Radiobutton(frm_4,text = 'no',variable = m,value = 2).grid(row = 10, column = 3, padx = 10, pady = 10)
 
 entryYear_entry.grid(row = 6, column = 3, padx = 10, pady = 10)
 grade_entry.grid(row = 7, column = 3, padx = 10, pady = 10)
