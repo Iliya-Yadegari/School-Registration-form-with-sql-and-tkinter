@@ -24,7 +24,7 @@ frm_2.grid(row = 1, column = 0, padx = 10, pady = 10)
 birthDate_lbl = Label(frm_2,text = 'Enter your birth date ===>').grid(row = 3, column = 0, padx = 10, pady = 10)
 birthDate_entry = Entry(frm_2)
 
-birthDate_entry.grid(row = 3, column = 1, padx = 10, pady = 10)
+birthDate_entry.grid(row = 3, column = 1, padx = 10, pady = 10) 
 
 frm_3 = LabelFrame(window)
 gender_lst = ['male','female']
