@@ -23,4 +23,5 @@ def column_save(name,LastName,birthDate,gender,ethnicity,emailAddress,entryYear,
         messagebox.showinfo('Result','Your infomation has been saved.')
     
     except:
-        messagebox.showerror('There is something wrong with your infomation try again.')
+        pass
+    messagebox.showerror('Result','There is something wrong with your infomation try again.')
